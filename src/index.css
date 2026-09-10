@@ -122,5 +122,21 @@
   animation-delay: 400ms;
 }
 
+/* Subtle hover pulse animation for WhatsApp floating button */
+@keyframes whatsappHoverPulse {
+  0%, 100% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45), 0 10px 25px -3px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0), 0 20px 30px -5px rgba(16, 185, 129, 0.6);
+  }
+}
+
+#floating-whatsapp-btn:hover {
+  animation: whatsappHoverPulse 1.25s ease-in-out infinite;
+}
+
 
 

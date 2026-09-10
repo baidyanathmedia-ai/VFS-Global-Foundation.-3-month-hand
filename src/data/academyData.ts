@@ -55,8 +55,8 @@ export const CENTRE_HEAD_INFO: LeadershipProfile = {
     "Personality Development"
   ],
   quote: "Confidence is built through knowledge, communication and the courage to express yourself.",
-  image: "/src/assets/images/ramsewak_gunjan_head_1788171851297.jpg",
-  secondaryImage: "/src/assets/images/gunjan_sir_secondary_action.jpg",
+  image: "/images/ramsewak_gunjan_head_1788171851297.jpg",
+  secondaryImage: "/images/gunjan_sir_secondary_action.jpg",
   secondaryImageTitle: "Executive Leadership & Mentorship"
 };
 
@@ -83,8 +83,8 @@ export const FACULTY_MEMBERS: FacultyProfile[] = [
       "Personality Development"
     ],
     quote: "Effective communication is not only about speaking English—it is about expressing yourself with confidence and clarity.",
-    image: "/src/assets/images/pramod_sir_mentor_1788171866404.jpg",
-    secondaryImage: "/src/assets/images/pramod_sir_secondary_action.jpg",
+    image: "/images/pramod_sir_mentor_1788171866404.jpg",
+    secondaryImage: "/images/pramod_sir_secondary_action.jpg",
     secondaryImageTitle: "Interactive Spoken English & Classroom Drills",
     badge: "English & Personality Mentor"
   },
@@ -108,7 +108,7 @@ export const FACULTY_MEMBERS: FacultyProfile[] = [
       "Visa Process Awareness"
     ],
     quote: "Knowledge becomes meaningful when it prepares learners for real-world opportunities.",
-    image: "/src/assets/images/raushan_mishra_mentor_1788171880485.jpg",
+    image: "/images/raushan_mishra_mentor_1788171880485.jpg",
     badge: "Travel & Hospitality Specialist"
   }
 ];
@@ -237,7 +237,7 @@ export const COURSES_DATA: Course[] = [
       "Airline / Airport Ground Support Associate",
       "Tour Coordinator & Operations Assistant"
     ],
-    image: "/src/assets/images/travel_hospitality_course_1788152513964.jpg"
+    image: "/images/travel_hospitality_course_1788152513964.jpg"
   },
   {
     id: "language-communication",
@@ -264,7 +264,7 @@ export const COURSES_DATA: Course[] = [
       "Customer Experience Representative",
       "Professional Service Coordinator"
     ],
-    image: "/src/assets/images/communication_skills_training_1788152527352.jpg"
+    image: "/images/communication_skills_training_1788152527352.jpg"
   }
 ];
 
@@ -360,7 +360,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "STPI Deoghar Grand Convocation & Batch Cohort",
     category: "Campus Life",
     description: "Graduating students and faculty holding official certificates outside the Software Technology Parks of India (STPI) facility in Jasidih, Deoghar.",
-    image: "/src/assets/images/stpi_deoghar_convocation_group_1788172265424.jpg",
+    image: "/images/stpi_deoghar_convocation_group_1788172265424.jpg",
     location: "STPI Deoghar Campus",
     featured: true
   },
@@ -369,7 +369,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Official Certificate Distribution Ceremony",
     category: "Certificate Distribution",
     description: "Distinguished guests and Centre Head awarding Certificate of Completion in Travel & Hospitality Management in front of VFS Global Foundation banner.",
-    image: "/src/assets/images/vfs_certificate_award_1788153716243.jpg",
+    image: "/images/vfs_certificate_award_1788153716243.jpg",
     location: "VFS Academy Hall",
     featured: true
   },
@@ -378,7 +378,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Grand Auditorium Stage Seminar & Cultural Event",
     category: "Student Activities",
     description: "Academy mentors and students participating in a dynamic seminar and cultural stage presentation event.",
-    image: "/src/assets/images/auditorium_ceremony_event.jpg",
+    image: "/images/auditorium_ceremony_event.jpg",
     location: "Main Auditorium Hall",
     featured: true
   },
@@ -387,7 +387,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Smart Classroom Lecture & Interactive Mentorship",
     category: "Training Sessions",
     description: "Students actively engaged during an interactive weekend training session focusing on hospitality management and communication modules with Centre Head.",
-    image: "/src/assets/images/classroom_smart_lecture_1788153752542.jpg",
+    image: "/images/classroom_smart_lecture_1788153752542.jpg",
     location: "STPI Smart Training Room",
     featured: true
   },
@@ -396,7 +396,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "VFS Global Academy Front Reception Desk",
     category: "Campus Life",
     description: "Batch students, centre coordinators, and Centre Head gathered at the official VFS Global Academy front desk at STPI Deoghar.",
-    image: "/src/assets/images/vfs_reception_desk_students_1788172247496.jpg",
+    image: "/images/vfs_reception_desk_students_1788172247496.jpg",
     location: "VFS Academy Reception",
     featured: true
   },
@@ -405,7 +405,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Student Practical Mock Presentation & Drills",
     category: "Student Activities",
     description: "Students practicing stage confidence, mock interviews, public presentation, and communication drills in front of smart display.",
-    image: "/src/assets/images/practical_mock_presentation_1788153769787.jpg",
+    image: "/images/practical_mock_presentation_1788153769787.jpg",
     location: "Interactive Training Hall",
     featured: true
   },
@@ -414,7 +414,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Student Celebrations & Cultural Gathering",
     category: "Student Activities",
     description: "Vibrant gathering of students and mentors celebrating batch milestones and cultural cohesion.",
-    image: "/src/assets/images/cultural_event_gathering.jpg",
+    image: "/images/cultural_event_gathering.jpg",
     location: "STPI Activity Area",
     featured: false
   },
@@ -423,7 +423,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Academic Workshop & Interactive Seminar",
     category: "Training Sessions",
     description: "In-depth practical seminar covering modern travel operations, customer service protocols, and spoken English.",
-    image: "/src/assets/images/academic_workshop_seminar.jpg",
+    image: "/images/academic_workshop_seminar.jpg",
     location: "Seminar Hall",
     featured: false
   },
@@ -432,7 +432,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Classroom Cohort & Active Study Session",
     category: "Training Sessions",
     description: "Dedicated weekend batch students in ergonomic chairs with notebooks engaged in communicative English and professional development.",
-    image: "/src/assets/images/communication_skills_training_1788152527352.jpg",
+    image: "/images/communication_skills_training_1788152527352.jpg",
     location: "Smart Training Room 2",
     featured: false
   },
@@ -441,7 +441,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Interactive Student Peer Interaction & Group Work",
     category: "Student Activities",
     description: "Collaborative peer group activities helping learners build teamwork, problem solving, and articulate conversation.",
-    image: "/src/assets/images/student_interaction_cohort.jpg",
+    image: "/images/student_interaction_cohort.jpg",
     location: "Discussion Lounge",
     featured: false
   },
@@ -450,7 +450,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Travel & Hospitality Practical Workshop",
     category: "Training Sessions",
     description: "Hands-on customer service simulation and front desk guest interaction exercises conducted at the academy.",
-    image: "/src/assets/images/travel_hospitality_course_1788152513964.jpg",
+    image: "/images/travel_hospitality_course_1788152513964.jpg",
     location: "Hospitality Lab",
     featured: false
   },
@@ -459,7 +459,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Outdoor Educational Field Study & Excursion",
     category: "Educational Visits",
     description: "Faculty mentor and student cohort on a field study and team-building educational visit in Deoghar.",
-    image: "/src/assets/images/outdoor_study_visit_1788152575776.jpg",
+    image: "/images/outdoor_study_visit_1788152575776.jpg",
     location: "Deoghar Nature Excursion",
     featured: false
   }

@@ -180,7 +180,7 @@ export const AdmissionSection: React.FC<AdmissionSectionProps> = ({ onOpenApply 
             {/* Official Certification Preview Card */}
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm bg-slate-900 text-white group">
               <img 
-                src="/src/assets/images/vfs_certificate_award_1788153716243.jpg" 
+                src="/images/vfs_certificate_award_1788153716243.jpg" 
                 alt="VFS Global Foundation Official Certificate Award" 
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"

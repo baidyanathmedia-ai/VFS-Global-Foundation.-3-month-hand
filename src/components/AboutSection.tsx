@@ -126,7 +126,7 @@ export const AboutSection: React.FC = () => {
               title={language === 'hi' ? 'फुल-स्क्रीन में देखने हेतु क्लिक करें' : 'Click to enlarge full-screen'}
             >
               <img 
-                src="/src/assets/images/stpi_convocation_campus_1788153690739.jpg" 
+                src="/images/stpi_convocation_campus_1788153690739.jpg" 
                 alt="STPI Deoghar Centre Convocation" 
                 className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
@@ -154,7 +154,7 @@ export const AboutSection: React.FC = () => {
                 title={language === 'hi' ? 'फुल-स्क्रीन में देखने हेतु क्लिक करें' : 'Click to enlarge full-screen'}
               >
                 <img 
-                  src="/src/assets/images/vfs_reception_batch_1788153734515.jpg" 
+                  src="/images/vfs_reception_batch_1788153734515.jpg" 
                   alt="VFS Academy Reception Desk" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -172,7 +172,7 @@ export const AboutSection: React.FC = () => {
                 title={language === 'hi' ? 'फुल-स्क्रीन में देखने हेतु क्लिक करें' : 'Click to enlarge full-screen'}
               >
                 <img 
-                  src="/src/assets/images/vfs_certificate_award_1788153716243.jpg" 
+                  src="/images/vfs_certificate_award_1788153716243.jpg" 
                   alt="Certificate Distribution" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"

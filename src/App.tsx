@@ -291,7 +291,7 @@ export default function App() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-xl transition-transform hover:scale-110 flex items-center justify-center cursor-pointer"
+            className="p-3.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center cursor-pointer"
             aria-label="Inquire on WhatsApp"
             title="Inquire on WhatsApp"
           >

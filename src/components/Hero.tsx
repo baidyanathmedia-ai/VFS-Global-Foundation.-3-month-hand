@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply }) => {
       {/* Background Image with High-End Overlay */}
       <div className="absolute inset-0 opacity-25 mix-blend-luminosity overflow-hidden">
         <img 
-          src="/src/assets/images/stpi_convocation_campus_1788153690739.jpg" 
+          src="/images/stpi_convocation_campus_1788153690739.jpg" 
           alt="VFS Global Academy STPI Deoghar Convocation" 
           className="w-full h-full object-cover object-center scale-105"
           referrerPolicy="no-referrer"
@@ -118,7 +118,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply }) => {
                 {/* Visual Header Image */}
                 <div className="relative h-48 rounded-xl overflow-hidden border border-slate-700">
                   <img 
-                    src="/src/assets/images/stpi_convocation_campus_1788153690739.jpg" 
+                    src="/images/stpi_convocation_campus_1788153690739.jpg" 
                     alt="STPI Deoghar Academy Centre Convocation" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

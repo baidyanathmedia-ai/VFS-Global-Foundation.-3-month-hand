@@ -36,6 +36,9 @@ async function startServer() {
     res.json({ newFiles, oldFiles });
   });
 
+  // Serve public static folder directly
+  app.use(express.static(path.join(process.cwd(), 'public')));
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
