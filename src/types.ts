@@ -50,6 +50,7 @@ export interface SuccessStory {
   keyMetric?: string;
   avatarBg?: string;
   rating?: number;
+  highlights?: string[];
 }
 
 export interface Notice {

@@ -1,4 +1,23 @@
 import { Course, GalleryItem, Testimonial, SuccessStory, Notice, FAQItem, LeadershipProfile, FacultyProfile, TeachingApproachItem } from '../types';
+import {
+  academicWorkshopSeminar,
+  auditoriumCeremonyEvent,
+  classroomSmartLecture,
+  communicationSkillsTraining,
+  culturalEventGathering,
+  gunjanSirSecondaryAction,
+  outdoorStudyVisit,
+  practicalMockPresentation,
+  pramodSirMentor,
+  pramodSirSecondaryAction,
+  ramsewakGunjanHead,
+  raushanMishraMentor,
+  stpiDeogharConvocationGroup,
+  studentInteractionCohort,
+  travelHospitalityCourse,
+  vfsCertificateAward,
+  vfsReceptionDeskStudents,
+} from '../assets';
 
 // ============================================================================
 // OFFICIAL CONTACT CONFIGURATION (Easily update official contact details here)
@@ -55,8 +74,8 @@ export const CENTRE_HEAD_INFO: LeadershipProfile = {
     "Personality Development"
   ],
   quote: "Confidence is built through knowledge, communication and the courage to express yourself.",
-  image: "/images/ramsewak_gunjan_head_1788171851297.jpg",
-  secondaryImage: "/images/gunjan_sir_secondary_action.jpg",
+  image: ramsewakGunjanHead,
+  secondaryImage: gunjanSirSecondaryAction,
   secondaryImageTitle: "Executive Leadership & Mentorship"
 };
 
@@ -83,8 +102,8 @@ export const FACULTY_MEMBERS: FacultyProfile[] = [
       "Personality Development"
     ],
     quote: "Effective communication is not only about speaking English—it is about expressing yourself with confidence and clarity.",
-    image: "/images/pramod_sir_mentor_1788171866404.jpg",
-    secondaryImage: "/images/pramod_sir_secondary_action.jpg",
+    image: pramodSirMentor,
+    secondaryImage: pramodSirSecondaryAction,
     secondaryImageTitle: "Interactive Spoken English & Classroom Drills",
     badge: "English & Personality Mentor"
   },
@@ -108,7 +127,7 @@ export const FACULTY_MEMBERS: FacultyProfile[] = [
       "Visa Process Awareness"
     ],
     quote: "Knowledge becomes meaningful when it prepares learners for real-world opportunities.",
-    image: "/images/raushan_mishra_mentor_1788171880485.jpg",
+    image: raushanMishraMentor,
     badge: "Travel & Hospitality Specialist"
   }
 ];
@@ -237,7 +256,7 @@ export const COURSES_DATA: Course[] = [
       "Airline / Airport Ground Support Associate",
       "Tour Coordinator & Operations Assistant"
     ],
-    image: "/images/travel_hospitality_course_1788152513964.jpg"
+    image: travelHospitalityCourse
   },
   {
     id: "language-communication",
@@ -264,7 +283,7 @@ export const COURSES_DATA: Course[] = [
       "Customer Experience Representative",
       "Professional Service Coordinator"
     ],
-    image: "/images/communication_skills_training_1788152527352.jpg"
+    image: communicationSkillsTraining
   }
 ];
 
@@ -360,7 +379,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "STPI Deoghar Grand Convocation & Batch Cohort",
     category: "Campus Life",
     description: "Graduating students and faculty holding official certificates outside the Software Technology Parks of India (STPI) facility in Jasidih, Deoghar.",
-    image: "/images/stpi_deoghar_convocation_group_1788172265424.jpg",
+    image: stpiDeogharConvocationGroup,
     location: "STPI Deoghar Campus",
     featured: true
   },
@@ -369,7 +388,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Official Certificate Distribution Ceremony",
     category: "Certificate Distribution",
     description: "Distinguished guests and Centre Head awarding Certificate of Completion in Travel & Hospitality Management in front of VFS Global Foundation banner.",
-    image: "/images/vfs_certificate_award_1788153716243.jpg",
+    image: vfsCertificateAward,
     location: "VFS Academy Hall",
     featured: true
   },
@@ -378,7 +397,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Grand Auditorium Stage Seminar & Cultural Event",
     category: "Student Activities",
     description: "Academy mentors and students participating in a dynamic seminar and cultural stage presentation event.",
-    image: "/images/auditorium_ceremony_event.jpg",
+    image: auditoriumCeremonyEvent,
     location: "Main Auditorium Hall",
     featured: true
   },
@@ -387,7 +406,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Smart Classroom Lecture & Interactive Mentorship",
     category: "Training Sessions",
     description: "Students actively engaged during an interactive weekend training session focusing on hospitality management and communication modules with Centre Head.",
-    image: "/images/classroom_smart_lecture_1788153752542.jpg",
+    image: classroomSmartLecture,
     location: "STPI Smart Training Room",
     featured: true
   },
@@ -396,7 +415,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "VFS Global Academy Front Reception Desk",
     category: "Campus Life",
     description: "Batch students, centre coordinators, and Centre Head gathered at the official VFS Global Academy front desk at STPI Deoghar.",
-    image: "/images/vfs_reception_desk_students_1788172247496.jpg",
+    image: vfsReceptionDeskStudents,
     location: "VFS Academy Reception",
     featured: true
   },
@@ -405,7 +424,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Student Practical Mock Presentation & Drills",
     category: "Student Activities",
     description: "Students practicing stage confidence, mock interviews, public presentation, and communication drills in front of smart display.",
-    image: "/images/practical_mock_presentation_1788153769787.jpg",
+    image: practicalMockPresentation,
     location: "Interactive Training Hall",
     featured: true
   },
@@ -414,7 +433,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Student Celebrations & Cultural Gathering",
     category: "Student Activities",
     description: "Vibrant gathering of students and mentors celebrating batch milestones and cultural cohesion.",
-    image: "/images/cultural_event_gathering.jpg",
+    image: culturalEventGathering,
     location: "STPI Activity Area",
     featured: false
   },
@@ -423,7 +442,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Academic Workshop & Interactive Seminar",
     category: "Training Sessions",
     description: "In-depth practical seminar covering modern travel operations, customer service protocols, and spoken English.",
-    image: "/images/academic_workshop_seminar.jpg",
+    image: academicWorkshopSeminar,
     location: "Seminar Hall",
     featured: false
   },
@@ -432,7 +451,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Classroom Cohort & Active Study Session",
     category: "Training Sessions",
     description: "Dedicated weekend batch students in ergonomic chairs with notebooks engaged in communicative English and professional development.",
-    image: "/images/communication_skills_training_1788152527352.jpg",
+    image: communicationSkillsTraining,
     location: "Smart Training Room 2",
     featured: false
   },
@@ -441,7 +460,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Interactive Student Peer Interaction & Group Work",
     category: "Student Activities",
     description: "Collaborative peer group activities helping learners build teamwork, problem solving, and articulate conversation.",
-    image: "/images/student_interaction_cohort.jpg",
+    image: studentInteractionCohort,
     location: "Discussion Lounge",
     featured: false
   },
@@ -450,7 +469,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Travel & Hospitality Practical Workshop",
     category: "Training Sessions",
     description: "Hands-on customer service simulation and front desk guest interaction exercises conducted at the academy.",
-    image: "/images/travel_hospitality_course_1788152513964.jpg",
+    image: travelHospitalityCourse,
     location: "Hospitality Lab",
     featured: false
   },
@@ -459,7 +478,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Outdoor Educational Field Study & Excursion",
     category: "Educational Visits",
     description: "Faculty mentor and student cohort on a field study and team-building educational visit in Deoghar.",
-    image: "/images/outdoor_study_visit_1788152575776.jpg",
+    image: outdoorStudyVisit,
     location: "Deoghar Nature Excursion",
     featured: false
   }
@@ -549,7 +568,12 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
     currentImpact: "Successfully coordinates terminal check-ins, boarding gates, and special passenger assistance with exceptional customer commendations.",
     keyMetric: "Airlines Selection",
     avatarBg: "bg-blue-600 text-white",
-    rating: 5
+    rating: 5,
+    highlights: [
+      "Boarding Gate Operations & Passenger Assistance",
+      "Spoken English & Aviation Fluency Mastery",
+      "IndiGo Hub Customer Commendation Winner"
+    ]
   },
   {
     id: "story-aman",
@@ -565,7 +589,12 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
     currentImpact: "Promoted to full Executive within 6 months; currently leads VIP guest arrivals, front-desk concierges, and luxury lounge operations.",
     keyMetric: "Fast-Track Promotion",
     avatarBg: "bg-emerald-600 text-white",
-    rating: 5
+    rating: 5,
+    highlights: [
+      "VIP Arrival Protocol & Executive Concierge",
+      "5-Star Luxury Etiquette & Front Desk Operations",
+      "Promoted to Full Executive in First 6 Months"
+    ]
   },
   {
     id: "story-priya",
@@ -581,7 +610,12 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
     currentImpact: "Processes 70+ visa applicants daily with zero compliance errors while maintaining exceptional applicant satisfaction ratings.",
     keyMetric: "Zero-Defect Verification",
     avatarBg: "bg-purple-600 text-white",
-    rating: 5
+    rating: 5,
+    highlights: [
+      "Biometric Enrollment & Identity Security",
+      "Consular SLA Compliance (70+ Files Daily)",
+      "Zero-Error Cross-Verification Quality Record"
+    ]
   },
   {
     id: "story-nitish",
@@ -597,7 +631,12 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
     currentImpact: "Directs hotel lobby reception, coordinates banquet corporate check-ins, and handles guest inquiries with confidence and poise.",
     keyMetric: "Campus Placement Selection",
     avatarBg: "bg-indigo-600 text-white",
-    rating: 5
+    rating: 5,
+    highlights: [
+      "Guest Check-In & PMS Software Management",
+      "Banquet Corporate Concierge Supervision",
+      "Selected Directly from STPI Campus Drive"
+    ]
   },
   {
     id: "story-megha",
@@ -613,7 +652,12 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
     currentImpact: "Designs customized spiritual and leisure travel packages across Eastern India with a 98% client satisfaction rate.",
     keyMetric: "98% Client Satisfaction",
     avatarBg: "bg-amber-600 text-white",
-    rating: 5
+    rating: 5,
+    highlights: [
+      "Spiritual & Heritage Tourism Itinerary Design",
+      "Corporate Telephone Negotiations & Sales",
+      "Maintained 98% Positive Client Review Score"
+    ]
   },
   {
     id: "story-rahul",
@@ -629,7 +673,12 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
     currentImpact: "Coordinates flight baggage handling, transit passenger clearances, and on-time turnarounds at Terminal 3.",
     keyMetric: "IGI Airport Placement",
     avatarBg: "bg-sky-600 text-white",
-    rating: 5
+    rating: 5,
+    highlights: [
+      "Terminal 3 Ramp Clearance Coordination",
+      "Baggage Turnaround & Time-Critical Handover",
+      "Radio Phonetics & Multi-Agency Communication"
+    ]
   }
 ];
 

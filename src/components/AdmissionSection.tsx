@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { ADMISSION_DATA } from '../data/academyData';
 import { useLanguage } from '../context/LanguageContext';
+import { vfsCertificateAward } from '../assets';
 
 interface AdmissionSectionProps {
   onOpenApply: () => void;
@@ -180,7 +181,7 @@ export const AdmissionSection: React.FC<AdmissionSectionProps> = ({ onOpenApply 
             {/* Official Certification Preview Card */}
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm bg-slate-900 text-white group">
               <img 
-                src="/images/vfs_certificate_award_1788153716243.jpg" 
+                src={vfsCertificateAward} 
                 alt="VFS Global Foundation Official Certificate Award" 
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
