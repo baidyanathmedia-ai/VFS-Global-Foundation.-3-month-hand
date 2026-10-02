@@ -21,6 +21,7 @@ import { BottomMarqueeSection } from './components/BottomMarqueeSection';
 import { Footer } from './components/Footer';
 import { ApplyModal } from './components/ApplyModal';
 import { SectionDivider } from './components/SectionDivider';
+import { SectionReveal } from './components/SectionReveal';
 import { 
   ArrowRight, 
   ChevronUp, 
@@ -122,7 +123,9 @@ export default function App() {
         />
 
         {/* 3. About Academy & STPI Location Section ("Vocational Excellence at STPI Deoghar") */}
-        <AboutSection />
+        <SectionReveal>
+          <AboutSection />
+        </SectionReveal>
 
         {/* Divider 2: About to Why Choose Us */}
         <SectionDivider
@@ -134,7 +137,9 @@ export default function App() {
         />
 
         {/* 4. Why Choose VFS Global Academy */}
-        <WhyChooseUs />
+        <SectionReveal>
+          <WhyChooseUs />
+        </SectionReveal>
 
         {/* Divider 3: Why Choose Us to Courses */}
         <SectionDivider
@@ -145,7 +150,9 @@ export default function App() {
         />
 
         {/* 5. Certificate Courses Section */}
-        <CoursesSection onOpenApply={handleOpenApply} />
+        <SectionReveal>
+          <CoursesSection onOpenApply={handleOpenApply} />
+        </SectionReveal>
 
         {/* Divider 4: Courses to Schedule */}
         <SectionDivider
@@ -158,7 +165,9 @@ export default function App() {
         />
 
         {/* 6. Course Schedule & Timings */}
-        <ScheduleSection />
+        <SectionReveal>
+          <ScheduleSection />
+        </SectionReveal>
 
         {/* Divider 5: Schedule to Admissions */}
         <SectionDivider
@@ -170,7 +179,9 @@ export default function App() {
         />
 
         {/* 7. Admissions Open & Document Verification Checklist */}
-        <AdmissionSection onOpenApply={() => handleOpenApply()} />
+        <SectionReveal>
+          <AdmissionSection onOpenApply={() => handleOpenApply()} />
+        </SectionReveal>
 
         {/* Divider 6: Admissions to Gallery */}
         <SectionDivider
@@ -181,7 +192,9 @@ export default function App() {
         />
 
         {/* 8. Authentic Campus & Activities Photo Gallery */}
-        <GallerySection onOpenApply={handleOpenApply} />
+        <SectionReveal>
+          <GallerySection onOpenApply={handleOpenApply} />
+        </SectionReveal>
 
         {/* Divider 7: Smooth curve into Leadership (Dark Canvas) */}
         <SectionDivider
@@ -191,7 +204,9 @@ export default function App() {
         />
 
         {/* 9. Leadership & Faculty Section */}
-        <LeadershipSection onOpenApply={handleOpenApply} />
+        <SectionReveal>
+          <LeadershipSection onOpenApply={handleOpenApply} />
+        </SectionReveal>
 
         {/* Divider 8: Smooth curve transition from Leadership to Testimonials */}
         <SectionDivider
@@ -202,7 +217,9 @@ export default function App() {
         />
 
         {/* 10. Student Testimonials */}
-        <TestimonialsSection />
+        <SectionReveal>
+          <TestimonialsSection />
+        </SectionReveal>
 
         {/* Divider 9: Testimonials to Success Stories */}
         <SectionDivider
@@ -215,7 +232,9 @@ export default function App() {
         />
 
         {/* 11. Alumni Success Stories & Case Studies */}
-        <SuccessStoriesSection onOpenApply={handleOpenApply} />
+        <SectionReveal>
+          <SuccessStoriesSection onOpenApply={handleOpenApply} />
+        </SectionReveal>
 
         {/* Divider 10: Success Stories to Video Showcase */}
         <SectionDivider
@@ -225,8 +244,10 @@ export default function App() {
           className="bg-white dark:bg-slate-950"
         />
 
-        {/* VIDEO SHOWCASE SECTION: Watch Our Latest Videos (4-video vertical Reel-style carousel) */}
-        <VideoShowcaseSection onOpenApply={handleOpenApply} />
+        {/* VIDEO SHOWCASE SECTION: Watch Our Latest Videos (Reel-style carousel) */}
+        <SectionReveal>
+          <VideoShowcaseSection onOpenApply={handleOpenApply} />
+        </SectionReveal>
 
         {/* Divider 11: Video Showcase to Notice Board */}
         <SectionDivider
@@ -239,7 +260,9 @@ export default function App() {
         />
 
         {/* 12. Dynamic Notice Board */}
-        <NoticeBoard />
+        <SectionReveal>
+          <NoticeBoard />
+        </SectionReveal>
 
         {/* Divider 10: Notice Board to Registration Portal */}
         <SectionDivider
@@ -250,7 +273,9 @@ export default function App() {
         />
 
         {/* 12. Full On-Page Registration Form Portal */}
-        <ApplySection />
+        <SectionReveal>
+          <ApplySection />
+        </SectionReveal>
 
         {/* Divider 11: Dynamic angled slant into CTA Banner */}
         <SectionDivider
@@ -260,7 +285,9 @@ export default function App() {
         />
 
         {/* 13. Final CTA Banner: LEARN. GROW. ACHIEVE. */}
-        <CtaSection onOpenApply={handleOpenApply} />
+        <SectionReveal>
+          <CtaSection onOpenApply={handleOpenApply} />
+        </SectionReveal>
 
         {/* Divider 12: Smooth wave transition from CTA Banner into FAQs */}
         <SectionDivider
@@ -270,7 +297,9 @@ export default function App() {
         />
 
         {/* 14. Frequently Asked Questions */}
-        <FaqSection />
+        <SectionReveal>
+          <FaqSection />
+        </SectionReveal>
 
         {/* Divider 13: Architectural angled cut into Contact & Map Section */}
         <SectionDivider
@@ -281,7 +310,9 @@ export default function App() {
         />
 
         {/* 15. Contact Academy & STPI Map */}
-        <ContactSection />
+        <SectionReveal>
+          <ContactSection />
+        </SectionReveal>
       </main>
 
       {/* Footer */}
