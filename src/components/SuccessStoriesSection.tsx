@@ -5,13 +5,20 @@ import {
   MapPin, 
   Star, 
   CheckCircle2, 
-  Filter,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  AlertCircle,
-  GraduationCap,
-  Award
+  Filter, 
+  ChevronDown, 
+  ChevronUp, 
+  Sparkles, 
+  AlertCircle, 
+  GraduationCap, 
+  Award,
+  Play,
+  Pause,
+  Film,
+  Volume2,
+  VolumeX,
+  ExternalLink,
+  Video
 } from 'lucide-react';
 import { SUCCESS_STORIES_DATA } from '../data/academyData';
 import { useLanguage } from '../context/LanguageContext';
@@ -25,6 +32,8 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
   const { t, language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+  const [playingVideoCards, setPlayingVideoCards] = useState<Set<string>>(new Set());
+  const [isAudioMuted, setIsAudioMuted] = useState(true);
   const { ref: sectionRef, isVisible } = useScrollAnimation<HTMLElement>({ threshold: 0.1 });
 
   const categories = [
@@ -44,6 +53,25 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
       const next = new Set(prev);
       if (next.has(id)) {
         next.delete(id);
+        // Also stop playing video if card collapses
+        setPlayingVideoCards((vPrev) => {
+          const vNext = new Set(vPrev);
+          vNext.delete(id);
+          return vNext;
+        });
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const toggleVideoPlayback = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setPlayingVideoCards((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
       } else {
         next.add(id);
       }
@@ -54,6 +82,7 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
   const toggleAllExpansion = () => {
     if (expandedCards.size === filteredStories.length) {
       setExpandedCards(new Set());
+      setPlayingVideoCards(new Set());
     } else {
       setExpandedCards(new Set(filteredStories.map((s) => s.id)));
     }
@@ -75,7 +104,7 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading with subtle fade-in-up */}
-        <div className={`text-center max-w-3xl mx-auto space-y-3 mb-10 transition-all duration-700 ${
+        <div className={`text-center max-w-3xl mx-auto space-y-3 mb-8 transition-all duration-700 ${
           isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-6'
         }`}>
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 text-xs font-bold uppercase tracking-wider">
@@ -88,6 +117,18 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
           <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
             {t.successStoriesSubtitle}
           </p>
+
+          {/* Quick Anchor Link to New Video Showcase Section */}
+          <div className="pt-2">
+            <a
+              href="#video-showcase"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/60 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-xs font-bold transition-all shadow-xs group"
+            >
+              <Film className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform" />
+              <span>{language === 'hi' ? 'वीडियो रील शोकेस देखें' : 'Watch Our Latest Videos (Reel Carousel)'}</span>
+              <span className="text-blue-500 font-extrabold">↓</span>
+            </a>
+          </div>
         </div>
 
         {/* Category Filters & Quick Expand All Toggle */}
@@ -133,16 +174,17 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
             ) : (
               <>
                 <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                <span>{language === 'hi' ? 'सभी हाइलाइट्स देखें' : 'Expand All Highlights'}</span>
+                <span>{language === 'hi' ? 'सभी हाइलाइट्स व वीडियो देखें' : 'Expand All & Video Stories'}</span>
               </>
             )}
           </button>
         </div>
 
-        {/* Success Stories Grid with Clean Initial View & Interactive Expandable Highlights */}
+        {/* Success Stories Grid with Clean Initial View & Interactive Expandable Highlights + Embedded Video Clips */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredStories.map((item, index) => {
             const isExpanded = expandedCards.has(item.id);
+            const isPlayingVideo = playingVideoCards.has(item.id);
             const highlights = item.highlights || [
               item.keyMetric || 'Industry Certified',
               'STPI Deoghar Mentorship',
@@ -168,12 +210,21 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
                       <span className="font-bold tracking-tight">{item.company}</span>
                     </span>
                     
-                    {item.keyMetric && (
-                      <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/60 whitespace-nowrap shadow-2xs">
-                        <Award className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                        <span>{item.keyMetric}</span>
-                      </span>
-                    )}
+                    <div className="flex items-center gap-1.5">
+                      {item.videoClip && (
+                        <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/70 text-blue-700 dark:text-blue-300 border border-blue-200/60 dark:border-blue-800/60">
+                          <Film className="w-2.5 h-2.5 text-blue-600 dark:text-blue-400" />
+                          <span>Video Clip</span>
+                        </span>
+                      )}
+
+                      {item.keyMetric && (
+                        <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/60 whitespace-nowrap shadow-2xs">
+                          <Award className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                          <span>{item.keyMetric}</span>
+                        </span>
+                      )}
+                    </div>
                   </div>
 
                   {/* Role and Placement Location */}
@@ -232,10 +283,10 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
                     </div>
                   </div>
 
-                  {/* Expandable Deep Case Study Drawer (Challenge -> STPI Transformation -> Highlights) */}
+                  {/* Expandable Deep Case Study Drawer + Embedded Alumni Video Player */}
                   <div
                     className={`overflow-hidden transition-all duration-400 ease-in-out ${
-                      isExpanded ? 'max-h-[850px] opacity-100 pt-2 space-y-2.5' : 'max-h-0 opacity-0'
+                      isExpanded ? 'max-h-[1400px] opacity-100 pt-2 space-y-3' : 'max-h-0 opacity-0'
                     }`}
                   >
                     {/* Phase 1: Starting Challenge */}
@@ -274,6 +325,111 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
                         ))}
                       </ul>
                     </div>
+
+                    {/* Embedded Alumni Short Video Clip Player (Directly within Expanded Card View) */}
+                    {item.videoClip && (
+                      <div className="bg-slate-900 text-white rounded-xl p-3 border border-slate-800 shadow-md space-y-2.5">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-6 h-6 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+                              <Video className="w-3.5 h-3.5" />
+                            </div>
+                            <div>
+                              <span className="text-[11px] font-bold block text-white">
+                                {language === 'hi' ? 'पूर्व छात्र वीडियो क्लिप' : 'Alumni Video Story'}
+                              </span>
+                              <span className="text-[10px] text-slate-400 font-medium">
+                                {item.videoClip.duration || 'Short Reel'} • {item.videoClip.platform === 'instagram' ? 'Instagram Reel' : 'Facebook Video'}
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-1.5">
+                            <button
+                              type="button"
+                              onClick={(e) => toggleVideoPlayback(item.id, e)}
+                              className={`px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1 transition-all cursor-pointer ${
+                                isPlayingVideo
+                                  ? 'bg-red-600 hover:bg-red-500 text-white'
+                                  : 'bg-blue-600 hover:bg-blue-500 text-white shadow-sm'
+                              }`}
+                            >
+                              {isPlayingVideo ? (
+                                <>
+                                  <Pause className="w-3 h-3 fill-white" />
+                                  <span>{language === 'hi' ? 'बंद करें' : 'Close Player'}</span>
+                                </>
+                              ) : (
+                                <>
+                                  <Play className="w-3 h-3 fill-white" />
+                                  <span>{language === 'hi' ? 'वीडियो चलाएं' : 'Play Video'}</span>
+                                </>
+                              )}
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Inline Video Player Container */}
+                        {isPlayingVideo ? (
+                          <div className="rounded-lg overflow-hidden border border-slate-800 bg-black aspect-video relative animate-fade-in-up">
+                            {item.videoClip.embedUrl ? (
+                              <iframe
+                                src={item.videoClip.embedUrl}
+                                title={item.videoClip.title}
+                                className="w-full h-full border-0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              />
+                            ) : (
+                              <video
+                                src={item.videoClip.url}
+                                controls
+                                autoPlay
+                                playsInline
+                                className="w-full h-full object-cover"
+                              />
+                            )}
+                          </div>
+                        ) : (
+                          <div 
+                            onClick={(e) => toggleVideoPlayback(item.id, e)}
+                            className="group/thumb relative rounded-lg overflow-hidden border border-slate-800 bg-slate-950 aspect-video flex items-center justify-center cursor-pointer transition-all hover:border-blue-500/60"
+                          >
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent" />
+                            
+                            {/* Play overlay button */}
+                            <div className="relative z-10 flex flex-col items-center gap-1.5">
+                              <div className="w-10 h-10 rounded-full bg-blue-600 group-hover/thumb:bg-blue-500 text-white flex items-center justify-center shadow-lg group-hover/thumb:scale-110 transition-transform">
+                                <Play className="w-4 h-4 fill-white ml-0.5" />
+                              </div>
+                              <span className="text-[11px] font-bold text-slate-200 group-hover/thumb:text-white">
+                                {language === 'hi' ? 'यहाँ वीडियो देखें' : 'Click to Play Story Here'}
+                              </span>
+                            </div>
+
+                            <span className="absolute bottom-2 right-2 text-[10px] font-medium text-slate-400 bg-black/60 px-2 py-0.5 rounded backdrop-blur-xs">
+                              {item.videoClip.duration}
+                            </span>
+                          </div>
+                        )}
+
+                        {/* Video Caption & Direct Social Link */}
+                        <div className="flex items-center justify-between text-[11px] text-slate-400 pt-0.5">
+                          <p className="line-clamp-1 text-slate-300 pr-2">
+                            {item.videoClip.caption}
+                          </p>
+                          <a
+                            href={item.videoClip.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-semibold shrink-0 cursor-pointer"
+                          >
+                            <span>Open</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -292,7 +448,7 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
                       <span>
                         {isExpanded
                           ? (language === 'hi' ? 'संक्षिप्त विवरण करें' : 'Show Less Highlights')
-                          : (language === 'hi' ? 'करियर यात्रा व विवरण देखें' : 'Read Career Highlights & Journey')}
+                          : (language === 'hi' ? 'करियर यात्रा व वीडियो देखें' : 'Read Career Highlights & Video Story')}
                       </span>
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] text-blue-600 dark:text-blue-400 font-semibold">
@@ -304,7 +460,7 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
                     </span>
                   </button>
 
-                  {/* Student Metadata Information */}
+                  {/* Student Metadata Information (Clean footer without duplicate student name h4) */}
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2.5">
                       <div className={`w-9 h-9 rounded-full ${item.avatarBg || 'bg-blue-600 text-white'} flex items-center justify-center font-bold text-xs shadow-sm shrink-0`}>
@@ -342,4 +498,5 @@ export const SuccessStoriesSection: React.FC<SuccessStoriesSectionProps> = ({ on
     </section>
   );
 };
+
 

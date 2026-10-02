@@ -1,4 +1,4 @@
-import { Course, GalleryItem, Testimonial, SuccessStory, Notice, FAQItem, LeadershipProfile, FacultyProfile, TeachingApproachItem } from '../types';
+import { Course, GalleryItem, Testimonial, SuccessStory, ReelVideoItem, Notice, FAQItem, LeadershipProfile, FacultyProfile, TeachingApproachItem } from '../types';
 import {
   academicWorkshopSeminar,
   auditoriumCeremonyEvent,
@@ -573,7 +573,15 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
       "Boarding Gate Operations & Passenger Assistance",
       "Spoken English & Aviation Fluency Mastery",
       "IndiGo Hub Customer Commendation Winner"
-    ]
+    ],
+    videoClip: {
+      title: "Sujit Kumar • IndiGo Airlines Ground Staff Journey",
+      duration: "1:15 min",
+      platform: "instagram",
+      url: "https://www.instagram.com/reel/Dd9nQOaTRkG/?stkn=MWU2cXRwdHY1dDJ1dg==",
+      embedUrl: "https://www.instagram.com/reel/Dd9nQOaTRkG/embed/",
+      caption: "Airport terminal customer assistance and boarding simulation training at STPI Deoghar."
+    }
   },
   {
     id: "story-aman",
@@ -594,7 +602,15 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
       "VIP Arrival Protocol & Executive Concierge",
       "5-Star Luxury Etiquette & Front Desk Operations",
       "Promoted to Full Executive in First 6 Months"
-    ]
+    ],
+    videoClip: {
+      title: "Aman Roy • 5-Star Luxury Hospitality & Guest Relations",
+      duration: "0:52 min",
+      platform: "facebook",
+      url: "https://www.facebook.com/share/v/1Dw2fGvSim/",
+      embedUrl: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1Dw2fGvSim%2F&show_text=0",
+      caption: "Overcoming stage hesitation and achieving front desk excellence at The Leela Palaces."
+    }
   },
   {
     id: "story-priya",
@@ -615,7 +631,15 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
       "Biometric Enrollment & Identity Security",
       "Consular SLA Compliance (70+ Files Daily)",
       "Zero-Error Cross-Verification Quality Record"
-    ]
+    ],
+    videoClip: {
+      title: "Priya Kumari • International Consular Operations",
+      duration: "1:20 min",
+      platform: "facebook",
+      url: "https://www.facebook.com/share/v/1VT2xq78p6/",
+      embedUrl: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1VT2xq78p6%2F&show_text=0",
+      caption: "Biometric enrollment standards and compliance training in practice."
+    }
   },
   {
     id: "story-nitish",
@@ -636,7 +660,15 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
       "Guest Check-In & PMS Software Management",
       "Banquet Corporate Concierge Supervision",
       "Selected Directly from STPI Campus Drive"
-    ]
+    ],
+    videoClip: {
+      title: "Nitish Kumar • Hotel Front Office & Guest Check-In",
+      duration: "0:45 min",
+      platform: "instagram",
+      url: "https://www.instagram.com/reel/Dd9nQOaTRkG/?stkn=MWU2cXRwdHY1dDJ1dg==",
+      embedUrl: "https://www.instagram.com/reel/Dd9nQOaTRkG/embed/",
+      caption: "Direct campus placement story at ITC Hotels from STPI Deoghar."
+    }
   },
   {
     id: "story-megha",
@@ -657,7 +689,15 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
       "Spiritual & Heritage Tourism Itinerary Design",
       "Corporate Telephone Negotiations & Sales",
       "Maintained 98% Positive Client Review Score"
-    ]
+    ],
+    videoClip: {
+      title: "Megha Kumari • Tour and Travel Itinerary Planning",
+      duration: "1:05 min",
+      platform: "facebook",
+      url: "https://www.facebook.com/share/p/1DqpegSRXY/",
+      embedUrl: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1DqpegSRXY%2F&show_text=true",
+      caption: "Mastering practical tourism workflows and client communication."
+    }
   },
   {
     id: "story-rahul",
@@ -678,7 +718,63 @@ export const SUCCESS_STORIES_DATA: SuccessStory[] = [
       "Terminal 3 Ramp Clearance Coordination",
       "Baggage Turnaround & Time-Critical Handover",
       "Radio Phonetics & Multi-Agency Communication"
-    ]
+    ],
+    videoClip: {
+      title: "Rahul Anand • Delhi Airport T3 Ground Operations",
+      duration: "0:58 min",
+      platform: "instagram",
+      url: "https://www.instagram.com/reel/Dd9nQOaTRkG/?stkn=MWU2cXRwdHY1dDJ1dg==",
+      embedUrl: "https://www.instagram.com/reel/Dd9nQOaTRkG/embed/",
+      caption: "Airport ramp transit procedures and radio communication training."
+    }
+  }
+];
+
+// ============================================================================
+// VIDEO SHOWCASE REELS
+// ============================================================================
+export const REEL_VIDEOS_DATA: ReelVideoItem[] = [
+  {
+    id: "reel-01",
+    cardNumber: "VIDEO 01",
+    title: "Instagram Reel",
+    titleHi: "इंस्टाग्राम रील",
+    subtitle: "Aviation & Hospitality Masterclass • Campus Highlight",
+    subtitleHi: "एविएशन व हॉस्पिटैलिटी मास्टरक्लास",
+    platform: "instagram",
+    platformLabel: "Instagram Reel",
+    url: "https://www.instagram.com/reel/Dd9nQOaTRkG/?stkn=MWU2cXRwdHY1dDJ1dg==",
+    embedUrl: "https://www.instagram.com/reel/Dd9nQOaTRkG/embed/",
+    thumbnail: practicalMockPresentation,
+    description: "Official Instagram Reel featuring student mock interviews, executive grooming standards, and spoken English confidence coaching inside the STPI Deoghar smart training room.",
+    tags: ["#VFSGlobalAcademy", "#InstagramReel", "#AviationTraining", "#STPIDeoghar"],
+    stats: {
+      views: "18.4K",
+      likes: "1.4K",
+      shares: "320"
+    },
+    duration: "0:45"
+  },
+  {
+    id: "reel-04",
+    cardNumber: "VIDEO 02",
+    title: "Dedicated MP4 / Connected Video Reel",
+    titleHi: "समर्पित MP4 / कनेक्टेड वीडियो रील",
+    subtitle: "Upload or Connect Any MP4 Video File",
+    subtitleHi: "कोई भी MP4 वीडियो फाइल अपलोड या कनेक्ट करें",
+    platform: "mp4",
+    platformLabel: "MP4 Video Player",
+    url: "https://assets.mixkit.co/videos/preview/mixkit-modern-airport-terminal-with-passengers-walking-43306-large.mp4",
+    thumbnail: outdoorStudyVisit,
+    description: "Dedicated custom video card engineered to play local uploaded MP4 files or external CDN video URLs with HTML5 playback, loop, volume, and fullscreen controls.",
+    tags: ["#CustomVideo", "#MP4Upload", "#InteractivePlayer", "#AlumniReel"],
+    stats: {
+      views: "Active",
+      likes: "Uploadable",
+      shares: "HD 1080p"
+    },
+    duration: "Custom",
+    isUploadable: true
   }
 ];
 

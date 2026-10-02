@@ -17,6 +17,7 @@ export interface Translations {
   navGallery: string;
   navLeadership: string;
   navTestimonials: string;
+  navVideos: string;
   navNotices: string;
   navFaq: string;
   navContact: string;
@@ -193,6 +194,7 @@ const TRANSLATIONS: Record<Language, Translations> = {
     navGallery: "Gallery",
     navLeadership: "Leadership",
     navTestimonials: "Testimonials",
+    navVideos: "Videos",
     navNotices: "Notices",
     navFaq: "FAQs",
     navContact: "Contact",
@@ -356,6 +358,7 @@ const TRANSLATIONS: Record<Language, Translations> = {
     navGallery: "गैलरी",
     navLeadership: "नेतृत्व संदेश",
     navTestimonials: "प्रशंसापत्र",
+    navVideos: "वीडियो",
     navNotices: "सूचनाएं",
     navFaq: "प्रश्नोत्तरी",
     navContact: "संपर्क",

@@ -11,6 +11,7 @@ import { GallerySection } from './components/GallerySection';
 import { LeadershipSection } from './components/LeadershipSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { SuccessStoriesSection } from './components/SuccessStoriesSection';
+import { VideoShowcaseSection } from './components/VideoShowcaseSection';
 import { NoticeBoard } from './components/NoticeBoard';
 import { ApplySection } from './components/ApplySection';
 import { CtaSection } from './components/CtaSection';
@@ -33,7 +34,8 @@ import {
   Bell, 
   HelpCircle,
   Users,
-  Briefcase
+  Briefcase,
+  Film
 } from 'lucide-react';
 import { CONTACT_CONFIG } from './data/academyData';
 
@@ -70,6 +72,7 @@ export default function App() {
         'leadership',
         'testimonials',
         'success-stories',
+        'video-showcase',
         'notices',
         'apply-now',
         'faqs',
@@ -214,14 +217,25 @@ export default function App() {
         {/* 11. Alumni Success Stories & Case Studies */}
         <SuccessStoriesSection onOpenApply={handleOpenApply} />
 
-        {/* Divider 10: Success Stories to Notice Board */}
+        {/* Divider 10: Success Stories to Video Showcase */}
         <SectionDivider
-          id="divider-success-notices"
+          id="divider-success-videos"
+          variant="glow-line"
+          accent="blue"
+          className="bg-white dark:bg-slate-950"
+        />
+
+        {/* VIDEO SHOWCASE SECTION: Watch Our Latest Videos (4-video vertical Reel-style carousel) */}
+        <VideoShowcaseSection onOpenApply={handleOpenApply} />
+
+        {/* Divider 11: Video Showcase to Notice Board */}
+        <SectionDivider
+          id="divider-videos-notices"
           variant="badge-crest"
           accent="amber"
           icon={<Bell className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />}
           badgeText="Official Campus Notice Board"
-          className="bg-white dark:bg-slate-950"
+          className="bg-slate-900"
         />
 
         {/* 12. Dynamic Notice Board */}

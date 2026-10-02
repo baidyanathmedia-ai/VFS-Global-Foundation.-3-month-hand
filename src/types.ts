@@ -35,6 +35,16 @@ export interface Testimonial {
   avatarBg?: string;
 }
 
+export interface SuccessStoryVideoClip {
+  title: string;
+  duration?: string;
+  platform: 'instagram' | 'facebook' | 'youtube' | 'mp4';
+  url: string;
+  embedUrl?: string;
+  thumbnail?: string;
+  caption?: string;
+}
+
 export interface SuccessStory {
   id: string;
   name: string;
@@ -51,6 +61,30 @@ export interface SuccessStory {
   avatarBg?: string;
   rating?: number;
   highlights?: string[];
+  videoClip?: SuccessStoryVideoClip;
+}
+
+export interface ReelVideoItem {
+  id: string;
+  cardNumber: string; // e.g. "VIDEO 01", "VIDEO 02"
+  title: string;
+  titleHi?: string;
+  subtitle: string;
+  subtitleHi?: string;
+  platform: 'instagram' | 'facebook' | 'mp4';
+  platformLabel: string;
+  url: string;
+  embedUrl?: string;
+  thumbnail: string;
+  description: string;
+  tags: string[];
+  stats: {
+    views?: string;
+    likes?: string;
+    shares?: string;
+  };
+  duration?: string;
+  isUploadable?: boolean;
 }
 
 export interface Notice {
